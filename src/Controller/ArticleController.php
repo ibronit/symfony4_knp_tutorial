@@ -18,8 +18,10 @@ class ArticleController extends Controller
 
     /**
      * @Route("/show/{slug}")
+     *
+     * @param string $slug
      */
-    public function show($slug)
+    public function show(string $slug)
     {
         return new Response(sprintf('You asked for see article: %s', $slug));
     }
