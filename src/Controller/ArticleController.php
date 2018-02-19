@@ -20,9 +20,11 @@ class ArticleController extends AbstractController
      * @Route("/show/{slug}")
      *
      * @param string $slug
+     *
+     * @return Response
      */
     public function show(string $slug)
     {
-        return new Response(sprintf('You asked for see article: %s', $slug));
+        return $this->render('article/show.html.twig', ['slug' => $slug]);
     }
 }
